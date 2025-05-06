@@ -1,96 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCQ Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <style>
     body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-}
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
 
-.container {
-    width: 50%;
-    margin: 50px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .container {
+        width: 80%;
+        max-width: 800px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        transition: all 0.3s ease;
+    }
 
-h1 {
-    text-align: center;
-    color: #333;
-}
+    .container:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
 
-.form-group {
-    margin-bottom: 15px;
-}
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 15px;
+    }
 
-input[type="file"],
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-}
+    h1:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(to right, #3498db, #2ecc71);
+    }
 
-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-}
+    .form-group {
+        margin-bottom: 25px;
+    }
 
-button:hover {
-    background-color: #218838;
-}
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #2c3e50;
+    }
 
-.mcq {
-    background-color: #f1f1f1;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-}
+    input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 2px dashed #3498db;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        transition: all 0.3s;
+    }
 
-.mcq p {
-    font-size: 18px;
-}
+    input[type="file"]:hover {
+        background-color: #e8f4fc;
+    }
 
-ul {
-    list-style-type: none;
-}
+    input[type="number"] {
+        width: 100%;
+        padding: 12px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: all 0.3s;
+    }
 
-a {
-    display: inline-block;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    margin-top: 20px;
-}
+    input[type="number"]:focus {
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        outline: none;
+    }
 
-a:hover {
-    background-color: #0056b3;
-}
+    button {
+        background: linear-gradient(to right, #3498db, #2ecc71);
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    button:hover {
+        background: linear-gradient(to right, #2980b9, #27ae60);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    button i {
+        margin-right: 8px;
+    }
+
+    .mcq {
+        background-color: #f8f9fa;
+        padding: 20px;
+        margin: 15px 0;
+        border-radius: 8px;
+        border-left: 4px solid #3498db;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .mcq p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+    }
+
+    ul {
+        list-style-type: none;
+        padding-left: 10px;
+    }
+
+    ul li {
+        padding: 8px 0;
+        position: relative;
+        padding-left: 25px;
+    }
+
+    ul li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        border: 2px solid #3498db;
+        border-radius: 50%;
+    }
+
+    a {
+        display: inline-block;
+        padding: 12px 20px;
+        background: linear-gradient(to right, #3498db, #2980b9);
+        color: white;
+        text-decoration: none;
+        margin-top: 20px;
+        border-radius: 5px;
+        transition: all 0.3s;
+        font-weight: 500;
+    }
+
+    a:hover {
+        background: linear-gradient(to right, #2980b9, #1c6ea4);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .file-upload-wrapper {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .file-upload-text {
+        text-align: center;
+        padding: 10px;
+        color: #666;
+    }
+
+    .supported-formats {
+        display: block;
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            width: 90%;
+            padding: 20px;
+        }
+    }
 </style>
+
 <body>
     <div class="container">
         <h1>Generate MCQs from Your Text</h1>
         <form action="/generate" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="file">Upload your document (PDF, TXT, DOCX):</label>
-                <input type="file" name="file" required>
+                <label for="file"><i class="fas fa-file-upload"></i> Upload your document:</label>
+                <div class="file-upload-wrapper">
+                    <input type="file" name="file" id="file" required>
+                    <div class="file-upload-text">Drag and drop your file here or click to browse</div>
+                </div>
+                <span class="supported-formats">Supported formats: PDF, TXT, DOCX</span>
             </div>
             <div class="form-group">
-                <label for="num_questions">How many questions do you want?</label>
-                <input type="number" name="num_questions" min="1" required>
+                <label for="num_questions"><i class="fas fa-question-circle"></i> How many questions do you
+                    want?</label>
+                <input type="number" name="num_questions" id="num_questions" min="1" max="50"
+                    placeholder="Enter a number (1-50)" required>
             </div>
-            <button type="submit">Generate MCQs</button>
+            <button type="submit"><i class="fas fa-magic"></i> Generate MCQs</button>
         </form>
     </div>
+
+    <script>
+        // Simple script to update file upload text
+        document.getElementById('file').addEventListener('change', function (e) {
+            const fileName = e.target.files[0] ? e.target.files[0].name : 'No file selected';
+            document.querySelector('.file-upload-text').textContent = fileName;
+        });
+    </script>
 </body>
+
 </html>
