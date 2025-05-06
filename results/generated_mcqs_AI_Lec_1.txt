@@ -7,74 +7,73 @@ D) 70%
 Correct Answer: C
 
 ## MCQ 2
-Question: Which of the following is NOT listed as a course project?
-A) N-Queens
-B) Image Recognition
-C) Tower of Hanoi
-D) Travelling Salesman
-Correct Answer: B
-
-## MCQ 3
-Question: How many students can be in a project team for CS324P?
-A) Up to 2
-B) Up to 3
-C) Up to 4
-D) Up to 5
-Correct Answer: B
-
-## MCQ 4
-Question:  What is the due date for the project proposal (according to the provided text)?
-A) March 21st
-B) April 10th
-C) May 1st
-D) Not specified in the text
-Correct Answer: B
-
-## MCQ 5
-Question: Which programming languages are used in the CS324P labs?
+Question: Which programming languages are used in the CS324P course labs?
 A) Java and Python
 B) C# and Java
 C) C# and Python
 D) C++ and Python
 Correct Answer: C
 
+## MCQ 3
+Question: What is the maximum number of students allowed in a project team?
+A) 2
+B) 3
+C) 4
+D) 5
+Correct Answer: B
+
+## MCQ 4
+Question:  Which of the following is NOT a listed project idea?
+A) N-Queens
+B) Sorting Algorithms
+C) Travelling Salesman
+D) Maze
+Correct Answer: B
+
+## MCQ 5
+Question:  Where should students upload their project demo video?
+A) Vimeo
+B) The course website
+C) YouTube course channel
+D) Google Drive
+Correct Answer: C
+
 ## MCQ 6
-Question:  What platform should students use for hosting their project code?
+Question: What is the main focus of the Turing Test?
+A) Evaluating computer vision capabilities
+B) Assessing a computer's ability to exhibit intelligent behavior indistinguishable from that of a human
+C) Measuring the speed of a computer's processing power
+D) Determining a computer's ability to perform complex calculations
+Correct Answer: B
+
+## MCQ 7
+Question:  What is a rational agent?
+A) An agent that acts randomly.
+B) An agent that acts to achieve the best expected outcome.
+C) An agent that always follows pre-programmed rules.
+D) An agent that learns from its mistakes.
+Correct Answer: B
+
+## MCQ 8
+Question:  Which of the following is NOT listed as a course objective?
+A) Gain a historical perspective of AI.
+B) Design and build a complete AI system from scratch.
+C) Explore the limitations of intelligent systems.
+D) Become familiar with basic principles of AI.
+Correct Answer: B
+
+## MCQ 9
+Question: Which topic is NOT listed under the "Mansoura FCIS Course Dependency" for AI?
+A) Data Structures
+B) Operating Systems
+C) Algorithm Analysis & Design
+D) Probabilities
+Correct Answer: B
+
+## MCQ 10
+Question: What platform is suggested for hosting project code and documentation?
 A) GitLab
 B) Bitbucket
 C) GitHub
 D) SourceForge
 Correct Answer: C
-
-## MCQ 7
-Question:  According to the course outline, which of these is NOT a learning objective of the course?
-A) Gain a historical perspective of AI.
-B) Master advanced robotics programming.
-C) Explore the limitations of intelligent systems.
-D) Become familiar with basic principles of AI.
-Correct Answer: B
-
-## MCQ 8
-Question:  Who are the instructors for the CS324P course?
-A) Dr. Taher Hamza and Dr. Amr El-Edkawy
-B) Dr. Sara El-Metwally and Eng. Amr El-Edkawy
-C) Dr. Taher Hamza and Dr. Sara El-Metwally
-D)  Not specified in the text
-Correct Answer: C
-
-## MCQ 9
-Question:  What is the Turing Test designed to provide an operational definition of?
-A)  Computational Power
-B)  Intelligence
-C)  Creativity
-D)  Consciousness
-Correct Answer: B
-
-
-## MCQ 10
-Question:  What is an agent in the context of Artificial Intelligence?
-A) A software program that performs specific tasks.
-B)  Something that acts.
-C)  A robot that interacts with the physical world.
-D)  A type of machine learning algorithm.
-Correct Answer: B
