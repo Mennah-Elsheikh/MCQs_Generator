@@ -11,7 +11,7 @@ import logging
 logging.getLogger("pdfminer").setLevel(logging.ERROR)
 
 # Set your API key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAFCyc24JzBDfBdH5uHqwLbSJFs2NJRecQ"
+os.environ["GOOGLE_API_KEY"] = ""
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 model = genai.GenerativeModel("models/gemini-1.5-pro")
 
