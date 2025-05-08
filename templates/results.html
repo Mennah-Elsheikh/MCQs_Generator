@@ -233,12 +233,20 @@
         </div>
         {% endif %}
         {% endfor %}
-
+<!-- 
         <div class="download-buttons">
             <a href="/download/{{ txt_filename }}" class="download-btn"><i class="fas fa-file-alt"></i> Download as
                 TXT</a>
             <a href="/download/{{ pdf_filename }}" class="download-btn"><i class="fas fa-file-pdf"></i> Download as
                 PDF</a>
+        </div> -->
+        <div class="download-buttons">
+            <a href="{{ txt_url }}" target="_blank" class="download-btn">
+                <i class="fas fa-file-alt"></i> Download as TXT
+            </a>
+            <a href="{{ pdf_url }}" target="_blank" class="download-btn">
+                <i class="fas fa-file-pdf"></i> Download as PDF
+            </a>
         </div>
 
         <div style="text-align: center; margin-top: 20px;">
