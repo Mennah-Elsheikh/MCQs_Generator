@@ -20,7 +20,7 @@ model = genai.GenerativeModel("models/gemini-1.5-pro")
 
 # Configure Cloudinary
 cloudinary.config(
-    cloud_name="mcq generator",
+    cloud_name="dkipnygdk",
     api_key="461395833491433",
     api_secret="vdhkkwuktdgMbrpPUK4-2yU69hg"
 )
