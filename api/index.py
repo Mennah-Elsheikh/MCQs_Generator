@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
+import sys
 import os
-import google.generativeai as genai
 
-# Set your API key
-os.environ["GOOGLE_API_KEY"] = "AIzaSyDAQqoEV4aB1mC-pppDTvF1hdy4uVfOBPM"
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
-model = genai.GenerativeModel("models/gemini-1.5-pro")
+# Add parent directory to path to allow imports from src
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from src.services.mcq_service import generate_mcqs_from_text
+from src.config import Config
 
 app = Flask(__name__)
 
@@ -22,29 +23,12 @@ def generate_mcqs():
     text = data['text']
     num_questions = data['num_questions']
     
-    prompt = f"""
-    You are an AI assistant helping the user generate multiple-choice questions (MCQs) based on the following text:
-    '{text}'
-    Please generate {num_questions} MCQs from the text. Each question should have:
-    - A clear question
-    - Four answer options (labeled A, B, C, D)
-    - The correct answer clearly indicated
-    Format:
-    ## MCQ
-    Question: [question]
-    A) [option A]
-    B) [option B]
-    C) [option C]
-    D) [option D]
-    Correct Answer: [correct option]
-    """
-    
     try:
-        response = model.generate_content(prompt).text.strip()
+        # Re-initialize config inside the function if needed for serverless environments
+        # or rely on the import time configuration
+        Config.validate()
+        response = generate_mcqs_from_text(text, num_questions)
         return jsonify({"mcqs": response})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-    
-# Do NOT include:
-# if __name__ == "__main__":
-#     app.run(debug=True)
+

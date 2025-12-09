@@ -1,0 +1,39 @@
+## MCQ
+Question: According to the text, which of the following is defined as a value that the model calculates during training?
+A) Learning rate
+B) Batch size
+C) Weights
+D) Epochs
+Correct Answer: C
+
+## MCQ
+Question: What is the consequence if the learning rate is set too high during training?
+A) The model converges very slowly.
+B) The model never converges, but instead bounces around the weights and bias that minimize the loss.
+C) The model automatically switches to full-batch gradient descent.
+D) The model converges quickly but becomes extremely noisy.
+Correct Answer: B
+
+## MCQ
+Question: What characterizes Stochastic Gradient Descent (SGD) regarding batch size?
+A) It uses the entire training dataset (full batch) per iteration.
+B) It uses only a single example (a batch size of one) per iteration.
+C) It averages gradients from a batch size greater than 1 but less than N data points.
+D) It only updates weights and bias after the completion of an entire epoch.
+Correct Answer: B
+
+## MCQ
+Question: In the context of model training, what does one "epoch" represent?
+A) The number of iterations required to update the parameters once.
+B) The total number of model parameter updates performed during the entire training process.
+C) The time it takes for the Mean Squared Error (MSE) to converge to a lower value.
+D) The model having processed every example in the training set once.
+Correct Answer: D
+
+## MCQ
+Question: Which performance metric is also known as the True Positive Rate (TPR) and measures the proportion of all actual positives that were classified correctly?
+A) Specificity
+B) Accuracy
+C) Precision
+D) Recall
+Correct Answer: D
